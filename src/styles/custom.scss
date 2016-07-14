@@ -1,0 +1,34 @@
+.pt-5 {
+  padding-top: 5px;
+}
+.mt-5 {
+  margin-top:5px;
+}
+.m-zero-auto {
+  margin: 0 auto;
+}
+.chat-message {
+  padding: 5px;
+  margin: 5px;
+  border-radius:4px;
+}
+.chat-container {
+  margin: 5px 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+.chat-container-height {
+  height: 85vh;
+}
+/* Landscape */
+@media only screen
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .chat-container-height {
+    height: 76vh;
+  }
+}
+.mh-150 {
+  min-height: 150px;
+}

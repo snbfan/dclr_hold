@@ -1,0 +1,16 @@
+<div class="row chat-container chat-container-height">
+</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="input-group">
+            <div class="input-group-addon">{{model.nickname}}</div>
+            <input type="text" class="form-control"
+                   ng-model="model.message"
+                   ng-keypress="keyPressProxy()"
+                   placeholder="Say something! )">
+            <span class="input-group-btn">
+                <button class="btn btn-default btn-info" type="button" ng-click="sendMessage()">Send</button>
+            </span>
+        </div>
+    </div>
+</div>

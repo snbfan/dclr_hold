@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docler App</title>
+    <base href="doclerapp">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- build:css -->
+    <link href="../dist/styles/doclerapp.min.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+<body ng-app="doclerapp" ng-cloak class="container">
+    <div ng-controller="MainController" class="pt-5">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <header>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="">
+                        <div class="btn-group" role="group"  ng-repeat="(key, item) in views">
+                            <button type="button" id="{{($index === 0) ? 'chattab': ''}}" ng-class="{'active': item.active}" class="btn btn-default" ng-click="setActiveTab(key)">{{key}}</button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div ng-repeat="(key, item) in views" ng-show="item.active" ng-include="'templates/view' + ($index + 1)+ '.html'"></div>
+            </div>
+        </div>
+    </div>
+    <!-- build:js -->
+    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-touch/angular-touch.min.js"></script>
+    <script type="text/javascript" src="../src/scripts/app.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

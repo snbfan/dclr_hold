@@ -1,0 +1,52 @@
+<div class="panel-group mt-5" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <span class="glyphicon-collapsible glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="" ng-click="toggleSettings()" aria-expanded="true" aria-controls="collapseOne">
+                    Image settings
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="widthRange">Width in px ({{ranges.width.min}} to {{ranges.width.max}})</label>
+                        <input type="text" id="widthRange" class="form-control"
+                               ng-model="model.width"
+                               ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 600, 'blur': 0 } }"
+                               ng-change="setImageUrl()">
+                    </div>
+                    <div class="form-group">
+                        <label for="heightRange">Height in px ({{ranges.height.min}} to {{ranges.height.max}})</label>
+                        <input type="text" id="heightRange" class="form-control"
+                               ng-model="model.height"
+                               ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 600, 'blur': 0 } }"
+                               ng-change="setImageUrl()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <span class="glyphicon-collapsible glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="" ng-click="toggleSettings()" aria-expanded="false" aria-controls="collapseTwo">
+                    Set your chat nickname
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="nickname">Your chat nickname</label>
+                        <input type="text" class="form-control" id="nickname" ng-model="model.nickname" placeholder="Jane Doe">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
