@@ -1,6 +1,6 @@
 ### Prerequisites
-- nodejs
-- npm
+1. nodejs
+2. npm
 
 ### Installing the dependencies.
 npm i
