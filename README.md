@@ -15,5 +15,11 @@ gulp build-all
 1. cd dist && ws
 2. Open http://127.0.0.1:8000 in browser
 
-### The task
-Please see "FRONT END test task - V2.pdf"
+### The app
+
+- SPA with 3 views
+- Chat is emulated
+- Tab 1: chat, Tab 1 blinks when message arrives and tab is inactive
+- Tab 2: gallery
+- Tab 3: chat and gallery setting
+- Mobile frinedly
